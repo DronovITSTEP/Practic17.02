@@ -1,20 +1,21 @@
 #pragma once
 #include <iostream>
+using namespace std;
 
 class FileOperation
 {
 	char path[20];
-	char mode[3];
 	FILE* f;
 public:
-
-	FileOperation(const char* p, const char* m) {
+	FileOperation(const char* p) {
 		strcpy_s(path, p);
-		strcpy_s(mode,m);
-		fopen_s(&f, path, mode);
+	}
+	~FileOperation() {
+		if (f) fclose(f);
+		cout << "Destructor\n";
 	}
 
 	void Save(int, int, int);
-	void Load(int&, int&, int&);
+	void Load(/*int&, int&, int&*/);
 };
 

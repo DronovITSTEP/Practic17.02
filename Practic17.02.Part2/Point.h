@@ -20,6 +20,11 @@ private:
 public:
 	Point(int x, int y1, int z1);
 	Point() : x{ 0 }, y{ 0 }, z{0} {}
+	Point() {
+		x = 0;
+		y = 0;
+		z = 0;
+	}
 
 	void Input();
 	void Output();

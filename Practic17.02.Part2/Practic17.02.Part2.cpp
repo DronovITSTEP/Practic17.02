@@ -1,12 +1,12 @@
 ﻿#include <iostream>
+#include<Windows.h>
 #include "Point.h"
-
+#include "FileOperation.h"
 
 using namespace std;
 
-
 int main()
-{
+{setlocale(LC_ALL, "");
     Point point;
     Point point1(6, 6, 8);
     point.setX(1);
@@ -18,6 +18,7 @@ int main()
     point1.SavePoint();
 
     point.LoadPoint();
-
     
+
+ 
 }

@@ -12,16 +12,14 @@ void Point::Output() {
 }
 
 void Point::SavePoint() {
-	char path[20], mode[3];
+	char path[20];
 	gets_s(path);
-	gets_s(mode);
-	FileOperation file{ path, mode };
+	FileOperation file{ path};
 	file.Save(x, y, z);
 }
 void Point::LoadPoint() {
-	char path[20], mode[3];
+	char path[20];
 	gets_s(path);
-	gets_s(mode);
-	FileOperation file{ path, mode };
-	file.Load(x, y, z);
+	FileOperation file{ path };
+	file.Load();
 }
